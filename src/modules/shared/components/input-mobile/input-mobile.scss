@@ -1,0 +1,133 @@
+.input-mobile-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8% 1fr;
+    align-items: start;
+    background-color: var(--background-grey);
+    z-index: 1000;
+    transition: all var(--animation-duration) var(--animation-type);
+   
+   
+}
+
+.input-mobile-bar{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 10px;
+    font-size: 1.4em;
+    transition: all var(--animation-duration) var(--animation-type);
+    font-family: RobotoLight;
+    color: var(--light-subtitle-color);
+
+    p{
+        margin: 0;
+        padding: 0;
+        margin-left: 25px;
+    }
+   
+    
+}
+
+.input-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 30px 10px 0 10px;
+    font-family: RobotoLight;
+    color: var(--light-subtitle-color);
+    font-size: 1.5em;
+    transition: all var(--animation-duration) var(--animation-type);
+    
+
+    input{
+        border: none;
+        outline: none;        
+        background-color: transparent;
+        color: inherit;
+        font-size: inherit;
+        width: 95%;
+        height: 60px;        
+        border-bottom: 2px solid var(--background-color);
+        background-color: var(--light-background-color);
+        padding-left: 10px;
+        transition: all var(--animation-duration) var(--animation-type);
+    }
+
+    button{
+        margin-top: 45px;
+        background-color: var(--background-color);
+        border: none;
+        outline: none;
+        padding: 4px 20px;
+        border-radius: 10px;       
+        font-size: 0.9em;
+        color: var(--dark-text-color);
+
+
+    }
+
+    .info-text{
+        height: 55px;
+    }
+
+    p{
+        margin: 15px 0;
+        padding: 0;
+        font-size: 0.7em;
+
+        &.error{
+            color: var(--error-color);
+        }
+
+        &.info{
+            color: var(--primary-color);
+        }
+    }
+
+   
+   
+
+    .disabled{
+        pointer-events: none;
+        color: var(--light-secondary-text-color);
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+}
+
+
+
+.dark .input-mobile-container{
+    background-color: black;
+    color: var(--dark-subtitle-color);
+}
+
+.dark .input-mobile-bar,
+.dark .input-mobile{
+    color: var(--dark-subtitle-color);
+
+    input{
+        background-color: var(--dark-background-color);
+    }
+
+    button{
+        
+        color: var(--dark-subtitle-color);
+        &.disabled {
+            background-color: rgba(208, 222, 213, 0.25)
+        }
+    }
+}
+
+
+
+

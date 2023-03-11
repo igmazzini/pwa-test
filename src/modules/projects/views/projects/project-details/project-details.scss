@@ -1,0 +1,485 @@
+.project-detail{
+    width: 100%;
+    height: 100%;   
+    display: grid;
+    grid-template-rows: 10% 1fr;
+   
+}
+
+.project-detail-breadcrumbs{    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project-detail-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+   
+}
+
+.project-tabs{
+    font-size: 1.3em;
+    width: 64%;
+    margin-right: 30px;
+    
+}
+
+/* .tab-nav-container{
+    font-size: 1.3em;
+} */
+
+.project-detail-info-button{
+    
+    background-color: var(--light-background-color);
+    width: 45%;
+    height: 120px;
+    padding: 20px 10px;
+    border-radius: 16px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.259);
+    color: var(--light-text-color);
+    transition: all var(--animation-duration) var(--animation-type);
+
+
+    p{
+        font-size: 1.7em;
+        margin: 0;
+        margin-top: 8px;
+        font-family: RobotoLight;
+        transition: all var(--animation-duration) var(--animation-type);
+       
+    }
+
+    .fa-hand-holding-dollar,
+    .fa-list-check{
+        color: var(--background-color);
+        font-size: 3.6em;
+    }
+   
+}
+
+.dark .project-detail-info-button{
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+    box-shadow: 1px 1px 2px rgba(245, 243, 243, 0.200);
+}
+
+
+
+@media screen and (max-width:1300px) {
+    .project-detail{
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+          
+    }
+
+    .project-detail-info{
+      padding: 5px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+       
+    }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cards-container{
+   
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+
+
+
+.budget-card,
+.project-card{
+
+    background-color: var(--background-color);
+    width: 95%;    
+    border-radius: 15px;
+    margin: 10px auto;
+    font-size: 1.4rem;
+    font-family: RobotoMedium;
+    color: whitesmoke;
+    border:none;
+    padding: 25px;
+   
+    
+}
+
+
+.budget-card-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 15px;
+
+}
+
+.budget-card-info--item{
+    width: 30%;
+    height: 100px;
+    display: grid;
+    gap: 10px;          
+    grid-template-rows: 10% 90%;
+    align-items: center;
+    justify-items: center;
+    margin-top: 25px;
+
+    p:first-child{
+        font-size: 1.3em;
+    }
+
+    p:last-child{
+        font-size: 2.1em;               
+       
+    }
+
+    .circle-progress-container{
+        position: relative;           
+        width: 130px;
+        grid-row: 1/-1;
+        margin-bottom: 15px;
+       
+        span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 1.7em;
+        }
+    }
+   
+}
+
+.project-card-details--title{
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    h4 {
+        border-bottom: 1px solid rgb(204, 204, 204);
+        width: 100%;
+    }
+   
+    
+}
+
+.project-card-details--totals{
+    grid-area: totals;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+   
+    font-family: RobotoMedium;
+   
+   
+}
+.project-card-details--totals-item{
+   
+    
+    
+    width: 49%;        
+    font-size: 1em;
+    padding-right: 15px;
+
+    .item-details{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    h4{
+        font-size: 1.3em;
+        text-align: left;
+        width: 100%;
+        border-bottom: 1px solid rgb(204, 204, 204);
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+  
+
+    button{
+        background-color: whitesmoke;
+        color: var(--background-color);
+        border-radius: 7px;
+        padding: 10px;
+        font-family: RobotoMedium;
+        margin-left: 35px;
+       
+    }
+}
+
+.project-card-details--totals-item:last-child{
+    border-right: none;
+}
+
+
+
+.project-card-details--categories{
+    grid-area: categories;   
+    max-height: 420px;
+    overflow-y: scroll;  
+    font-family: RobotoMedium;
+    
+
+    table{
+        width: 100%;
+        height: 150px;
+        table-layout: fixed;                
+        border-collapse: collapse; 
+
+
+        tbody{
+            position: relative;
+        }    
+
+        tr {
+            
+
+            border-bottom: 1px solid rgba(204, 204, 204, 0.34);
+           
+           
+
+            th{
+                text-align: center;
+                font-weight: normal;
+            }
+
+            td{
+                text-align: center; 
+               
+            }
+
+            td:first-child{
+                text-align: start;
+            }
+           
+
+           
+            
+        }
+
+       
+
+       
+    }
+  
+    
+}
+
+.project-card-details--categories::-webkit-scrollbar {
+    width: 4px;
+      
+   
+  }
+.project-card-details--categories::-webkit-scrollbar-track {
+    background-color: var(--button-active-color-light);
+    border-bottom-right-radius: inherit;
+}
+.project-card-details--categories::-webkit-scrollbar-thumb {
+    background-color: var(--button-active-color);        
+    
+}
+.project-card-details--categories::-webkit-scrollbar-thumb:hover {
+    background-color: var(--background-color);
+    
+} 
+
+.project-card-details--categories-total{
+    grid-area: categoriesTotal;
+    font-family: RobotoMedium;
+
+    table{
+        width: 100%;
+        table-layout: fixed;  
+
+        tr{
+
+            
+            td{
+                text-align: center;                
+            }
+
+            td:first-child{
+                text-align: left;
+            }
+        }
+    }
+}
+
+.project-card-details--buttons{
+
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
+   
+
+    .new-order-button,
+    .history-button{
+        background-color: whitesmoke;
+        color: var(--background-color);
+        border-radius: 7px;
+        padding: 10px;
+        font-family: RobotoMedium;
+        margin-left: 15px;
+
+
+        i{
+            margin-right: 5px;
+        }
+    }
+    
+}
+.project-card-details--buttons-icon{
+    font-size: 3rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.project-card-details--buttons-icon:active{
+    background-color: var(--button-active-color);
+    border-radius: 50%;
+}
+
+ @media screen and (max-width:760px) {
+    
+
+    .cards-container{           
+       
+        position: relative;
+        /* .project-card{
+           height: 95%;
+        } */
+    }
+
+    .budget-card {
+
+        .budget-card-info{
+            font-size: 0.9em;
+            p:last-child{
+                font-size: 2em;
+            }
+        }
+
+        .circle-progress-container{
+            width: 105px;
+        }
+    }
+
+    .card-details{      
+       
+        grid-template-rows: 5% 25% 25% 35% 10%;
+        gap: 3px;
+        grid-template-areas: 
+        "title title title buttons buttons"
+        "totals totals totals totals totals"
+        "categories categories categories categories categories"   
+        "categories categories categories categories categories"                   
+        "categoriesTotal categoriesTotal categoriesTotal categoriesTotal categoriesTotal";        
+        height: 100%;
+      
+    }
+    
+    .project-card-details--totals{
+       
+        flex-direction: column;
+        height: auto;
+
+
+        .project-card-details--totals-item{
+            width: 100%;
+           
+
+
+            .item-details{
+                justify-content: space-between;
+            }
+        }
+
+        .project-card-details--totals-item:last-child{
+            margin-top: 30px;
+        }
+    }
+
+    .project-card-details--categories{
+        max-height: 275px;
+        
+        table{
+            tr{
+                td:first-child {
+                    width: 80%;
+                }
+                td:last-child {
+                    width: 20%;
+                }
+            }
+        }
+    }
+    
+
+       
+} 
+
+
+

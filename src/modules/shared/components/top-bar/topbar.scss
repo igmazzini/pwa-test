@@ -1,0 +1,100 @@
+.top-bar {
+
+    width: 100%;   
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--layout-padding-left);
+    padding-right: 30px;
+    background-color: var(--light-background-color);
+    color: var(--light-text-color);
+    transition: all var(--animation-duration) var(--animation-type);
+    z-index: 100;
+
+}
+
+.top-bar--title,
+.top-bar--search,
+.top-bar--account {
+    width: 25%;
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    color: var(--light-text-color);
+    font-family: RobotoLight;
+}
+
+.top-bar--title {
+
+    margin-right: auto;
+    color: inherit;
+    min-width: 500px;
+    cursor: pointer;
+}
+
+.top-bar--search {
+    margin-right: 30px;
+    min-width: 200px;
+    color: inherit;
+}
+
+.top-bar--account {
+    width: auto;
+    color: inherit;
+    
+}
+
+.open-menu-icon {
+    font-size: 3em;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.dark .app-container-views .top-bar {
+    color: white;
+    background-color: var(--dark-background-color);
+}
+
+.fa-chevron-left{
+    font-size: 2em;   
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+@media screen and (max-width:1300px) {
+
+    .top-bar {       
+        
+        height: 50px;
+        padding-left: 0;
+        padding-right: 10px;
+        justify-content: flex-start;
+        
+    }
+
+    .top-bar--title {
+        font-size: 1.4em;   
+        min-width: 240px;   
+        margin-right: 10px;       
+
+    }
+
+   .top-bar--account{      
+      
+        margin-right: 0;
+        margin-left: auto;
+   }
+
+   
+
+}
+
+@media screen and (max-height:750px)  and (min-width:1300px) {
+   .top-bar--title{
+        font-size: 2.5em;
+   }
+}

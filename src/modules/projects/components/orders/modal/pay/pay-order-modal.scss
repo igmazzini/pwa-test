@@ -1,0 +1,235 @@
+.modal{
+    background-color: rgba(0, 0, 0, 0.350);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    font-size: 1em;
+    transition: all var(--animation-duration) var(--animation-type);
+}
+
+.modal-layout{
+    width: 60%;
+   /*  height: 72%;     */
+    border-radius: 16px;
+    background-color: var(--light-background-color);   
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;    
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    transition: all var(--animation-duration) var(--animation-type);
+    margin-top: 30px; 
+}
+
+.modal-title{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: RobotoLight;
+    color: var(--light-text-color);
+    border-bottom: 1px solid #ccc;
+
+    p{
+        margin: 0;
+        padding: 0;
+        font-size: 1.6em;
+       
+        transition: all var(--animation-duration) var(--animation-type);
+    }
+}
+
+.modal-form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);   
+    gap: 10px;
+    width: 100%;   
+    font-family: RobotoLight;
+    color: var(--light-text-color);
+    margin-top: 1%;
+    align-items: start;
+   
+}
+
+.provider-data{
+    display: grid;    
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);    
+    gap: 10px;
+
+    p:first-child{
+        grid-column: 1/-1;
+        margin: 0;
+    }
+   
+
+}
+.provider-contact-data{
+   
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);  
+
+
+    p:first-child{
+        grid-column: 1/-1;
+        margin: 0;
+       
+    }
+}
+
+.pay-data{
+   
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 10px;
+
+    .custom-select-container{
+        z-index: 10;
+       
+    }
+
+   /*  .custom-select-container :deep(.select-container){
+        height: 53px !important;       
+    } */
+
+     
+}
+
+.bank-data{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;      
+    gap: 10px;     
+    
+   
+
+    .text-field-container{
+        height: 50px;
+    }
+}
+
+.bank-data-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+
+    .fa-clipboard{
+        font-size: 0.9em;
+        color: var(--success-color);
+    }
+
+}
+
+.proof-data{
+    margin-top: 1%;
+}
+
+
+.proof-container{
+    display: flex;
+    width: 100%;
+    height: 190px;
+    /* background-color: var(--background-grey); */
+    border: 1px solid #ccc;
+    border-radius: 10px;   
+    padding: 10px;      
+    flex-direction: column;
+    margin-top: 1%;
+}
+
+.modal-actions{
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;   
+
+
+    .last-updated{
+        margin: 0;
+        margin-right: auto;
+        margin-top: auto;
+        padding: 0;
+        font-family: RobotoLight;
+        color: var(--ligth-subtitle-color);
+        font-size: 0.850em;
+    }
+    
+   
+}
+
+.modal-actions--cancel,
+.modal-actions--accept{
+    background-color: var(--background-color);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 16px;
+    color: var(--dark-text-color);
+    margin-left: 15px;
+}
+
+.modal-actions--cancel{
+    background-color: var(--background-grey);
+    color: var(--light-text-color);
+}
+
+.modal-actions--cancel:active,
+.modal-actions--accept:active{
+    background-color: var(--button-active-color-light);
+}
+
+.modal-actions--accept:active{
+    color: var(--light-text-color);
+}
+
+
+.dark .modal{
+    background-color: rgba(243, 237, 237, 0.3);
+}
+
+.dark .modal-layout{
+    background-color: black;
+   
+}
+
+.dark .modal-title{
+    color: var(--dark-text-color);
+}
+.dark .modal-form{
+    color: var(--dark-text-color);
+}
+
+.dark .modal-form{
+    color: var(--dark-text-color);
+}
+
+.dark .bank-data,
+.dark .proof-container{
+    background-color: var(--dark-background-color);
+}
+
+
+/* @media screen and(max-height:900px){
+    .modal-layout{
+        height: 75%;
+    }
+} */

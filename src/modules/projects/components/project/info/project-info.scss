@@ -1,0 +1,104 @@
+
+.project{
+    width: 30%;
+    /* min-width: 425px;     */
+    height: 200px;
+    display: grid;
+    grid-template-rows: 30%  1fr;
+    margin-right: 30px;   
+   
+   
+}
+.project-title{
+    
+    width: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+
+    p{
+        margin: 0;
+        padding: 0;
+        color: var(--light-text-color);
+        font-family: RobotoRegular;
+        font-size: 1.3em;
+        transition: all var(--animation-duration) var(--animation-type);
+    }
+
+   
+}
+
+.project-info{
+
+    
+    position: relative;
+    padding-left: 0;
+    padding-right: 10px;
+    transition: all var(--animation-duration) var(--animation-type);
+
+    p{
+        color: var(--light-subtitle-color);       
+        padding: 0;   
+        margin: 0;   
+        transition: all var(--animation-duration) var(--animation-type);
+    }   
+
+
+}
+
+
+
+.project-info-row{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+    padding: 10px 10px 0px 5px;
+}
+
+.project-info-row:nth-child(3){
+    p:last-child{
+        margin-left: 30px;
+    }
+}
+.project-info-row:last-child{
+
+    justify-content: flex-end;
+
+    p:first-child{
+        margin-right: auto;
+    }
+}
+
+.fa-calendar{
+        
+    font-size: 1.3em;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all var(--animation-duration) var(--animation-type);
+}
+
+.dark .project .project-title p{
+    color: var(--dark-text-color);
+}
+
+.dark .project .project-info{
+    background-color: var(--dark-background-color);
+    border-radius: 16px;
+}
+.dark .project .project-info .fa-calendar,
+.dark .project .project-info p {
+    color: var(--dark-subtitle-color);
+    
+}
+
+.dark .project-info-row{
+    border-bottom: 1px solid rgba(248, 246, 246, 0.34);
+}   
+
+@media screen and (max-height:750px) {
+    .project {
+        height: 150px;
+    }
+}

@@ -1,0 +1,39 @@
+.dashboard{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40% 1fr;
+   
+}
+
+.dashboard-projects,
+.dashboard-statistics{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+
+.dashboard-statistics{
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns:  1fr 35%;
+    gap: 15px;
+
+    
+}
+
+
+
+@media screen and (max-height:750px){
+    .dashboard{
+      
+        grid-template-rows: 30% 1fr;
+       
+    }
+}

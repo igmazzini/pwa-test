@@ -1,0 +1,197 @@
+.select-mobile-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--background-grey);
+    z-index: 1000;
+  
+
+    transition: all var(--animation-duration) var(--animation-type);
+}
+
+.select-mobile-bar{
+    display: flex;
+    align-items: center;   
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    padding: 0 10px;
+    font-size: 1.5em;
+    transition: all var(--animation-duration) var(--animation-type);
+    font-family: RobotoLight;
+    color: var(--light-subtitle-color);
+
+    p{
+        margin: 0;
+        padding: 0;
+        margin-left: 25px;
+    }
+   
+    
+}
+
+.select-mobile-input{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 10px;
+    font-size: 1.5em;
+    font-family: RobotoLight;
+    color: var(--light-subtitle-color);
+    transition: all var(--animation-duration) var(--animation-type);
+    
+
+    input{
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 35px;
+        border-radius: 10px;
+        padding: 0 10px;
+        color: inherit;
+        transition: all var(--animation-duration) var(--animation-type);
+    }
+}
+
+.select-mobile-list{
+    width: 95%;
+    /* height: calc(100% - 300px) */; 
+    min-height: 200px;
+    max-height: calc(100% - 200px);
+    height: auto;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-family: RobotoLight;
+    color: var(--light-subtitle-color);
+    padding-bottom: 15px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    transition: all var(--animation-duration) var(--animation-type);
+    background-color: var(--light-background-color);
+    border-radius: 10px;
+   
+   
+    ul{
+        width: 100%;        
+        padding: 0;     
+        
+    }
+
+    li{
+        list-style: none;
+        padding: 8px 10px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: all var(--animation-duration) var(--animation-type);
+
+        span{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #ccc;
+            border-radius: 100px;
+            margin-right: 10px;
+            transition: all var(--animation-duration) var(--animation-type);
+        }
+
+        .selected {
+            background-color: rgba(33, 150, 84, 0.4);
+           
+        }
+       
+    }
+
+    .option-selected{
+        background-color: rgba(47, 137, 84, 0.1);
+    }
+    
+}
+
+
+.open-keyboard {
+    max-height: calc(100% - 475px);
+}
+
+.select-mobile-actions{
+    width: 100%;
+    height: 60px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    button{
+        background-color: var(--background-color);
+        border: none;
+        outline: none;
+        padding: 4px 20px;
+        border-radius: 10px;       
+        font-size: 1.6em;
+        color: var(--dark-text-color);
+
+
+    }
+
+    .disabled{
+        pointer-events: none;
+        color: var(--light-secondary-text-color);
+        background-color: rgba(0, 0, 0, 0.075);
+    }
+}
+
+
+.dark .select-mobile-container {
+    background-color: black;
+}
+
+.dark .select-mobile-bar {
+    color: var(--dark-subtitle-color);
+
+   
+}
+
+.dark .select-mobile-actions{
+    button{
+        color: var(--dark-subtitle-color);    
+        
+    }  
+}
+
+.dark  .disabled{
+    color: var(--dark-subtitle-color);
+    background-color: rgba(232, 222, 222, 0.4);
+    
+}
+
+.dark .select-mobile-input input {
+    color: var(--dark-subtitle-color);
+    background-color: var(--dark-background-color);
+}
+
+.dark .select-mobile-list{
+    background-color: var(--dark-background-color);
+}
+
+.dark .select-mobile-list li {
+    background-color: var(--dark-background-color);
+    color: var(--dark-subtitle-color);
+}
+
+.dark .select-mobile-list li   {
+
+    &.option-selected{
+        background-color: rgba(208, 222, 213, 0.25);
+    }
+   
+}

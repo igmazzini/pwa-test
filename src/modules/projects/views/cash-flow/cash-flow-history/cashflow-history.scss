@@ -1,0 +1,67 @@
+.cashflow-history{
+    width: 100%;
+    height: 100%;   
+    display: grid;
+    grid-template-rows: 5% 1fr; 
+   
+}
+
+.tab-nav-container{
+   font-size: 1em;
+   grid-template-rows: 7% 1fr !important;
+}
+
+.cashflow-history-breadcrumbs{    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.cashflow-history-actions{
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.cta-button{
+    background-color: var(--background-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 16px;
+    color: var(--dark-text-color);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.230);   
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        margin: 0;
+        margin-left: 15px;
+        padding: 0;
+        display: inline;
+        font-size: 0.8em;
+    }
+}
+
+.cta-button:active{
+    background-color: var(--button-active-color-light);
+}
+
+.cta-button:active{
+    color: var(--light-text-color);
+}
+
+@media screen and (max-width:1300px){
+    .cashflow-history{
+        font-size: 1.4em;
+        grid-template-rows: 1fr;
+    } 
+
+    .tab-nav-container {        
+        grid-template-rows: 6% 1fr !important;
+    }
+}

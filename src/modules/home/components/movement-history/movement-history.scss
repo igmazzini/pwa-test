@@ -1,0 +1,79 @@
+.history {
+  width: 100%;
+  min-width: 645px;
+  height: 400px;
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  overflow: hidden;
+}
+
+.history-title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p,
+  a {
+    margin: 0;
+    padding: 0;
+    color: var(--light-text-color);
+    font-family: RobotoRegular;
+    font-size: 1.3em;
+    transition: all var(--animation-duration) var(--animation-type);
+  }
+
+  a {
+    color: var(--light-secondary-text-color);
+    font-size: 0.8em;
+    margin-left: 15px;
+  }
+}
+
+.history-list {
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-background-color);  
+  border-radius: 16px;
+  transition: all var(--animation-duration) var(--animation-type);
+  position: relative;
+}
+
+.empty-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p{
+    margin: 0;
+    padding: 0;
+    color: var(--light-text-color);
+    font-family: RobotoLight;
+    transition: all var(--animation-duration) var(--animation-type);
+  }
+}
+.list-table{
+  grid-template-rows: 12% 1fr; 
+}
+
+.list-table-row {
+  grid-template-columns: 1fr 1fr 16% 20% 15% 15%;
+ 
+} 
+
+
+.dark .empty-list,
+.dark .history-title {
+  p {
+    color: var(--dark-text-color);
+  }
+
+  a {
+    color: var(--dark-secondary-text-color);
+  }
+}
+
+.dark .history-list {
+  background-color: var(--dark-background-color);
+}

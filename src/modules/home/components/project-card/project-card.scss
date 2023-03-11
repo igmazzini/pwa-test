@@ -1,0 +1,197 @@
+.projects-list--card {
+
+    width: 23%;
+    max-width: 350px;
+   
+    max-height: 200px;
+    border-radius: 16px;
+    margin: 0;
+    margin-right: 20px;
+    background-color: var(--light-background-color);
+    transition: all var(--animation-duration) var(--animation-type);
+    cursor: pointer;
+}
+
+.projects-list--card:hover {
+    background-color: var(--button-active-color-light);
+}
+
+.dark .projects-list--card:hover {
+    background-color: var(--light-background-color);
+}
+
+.projects-list--card:hover .projects-list--card---info----percent{
+    background-color: var(--light-background-color);
+}
+.projects-list--card:hover .projects-list--card---info----date p:last-child{
+    color: var(--light-text-color);
+}
+.dark .projects-list--card:hover .projects-list--card---info .projects-list--card---info----date p:first-child{
+   
+    color: var(--light-secondary-text-color);
+   
+}
+.dark .projects-list--card:hover .projects-list--card---name p,
+.dark .projects-list--card:hover .projects-list--card---name .marker{
+    color: var(--light-text-color);
+}
+
+.dark .projects-list--card:hover .projects-list--card---info----percent{
+    background-color: var(--button-active-color-light);
+}
+
+.dark .projects-list--card:hover .projects-list--card---info----date p:last-child{
+    color: var(--success-color);
+}
+
+.projects-list--card---name{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    padding: 30px;
+    position: relative;
+
+    p{
+        margin: 0;
+        padding: 0;
+        margin-left: 15px;
+        font-size: 1.3em;
+        max-lines: 2;
+        font-family: RobotoRegular;
+        transition: all var(--animation-duration) var(--animation-type);
+
+    }
+
+    .project--name-circle{
+        width: 45px;
+        height: 45px;
+        border-radius: 100px;
+        background-color: #01C856;
+      
+    }
+
+    .marker{
+        position: absolute;
+        top: 6%;
+        right: 4%;
+        font-size: 1.3em;
+        color: var(--light-text-color);
+        transition: all var(--animation-duration) var(--animation-type);
+    }
+
+    .project-code,       
+    .project-status{
+        font-family: RobotoLight;
+        font-size: 1em;
+        color: var(--light-secondary-text-color);
+    }
+
+    .project-code{
+        font-size: 1.1em;
+    }
+}
+
+.projects-list--card---info{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+
+.projects-list--card---info----date{
+
+    p{
+        margin: 0;
+        padding: 0;
+        transition: all var(--animation-duration) var(--animation-type);
+    }
+
+    p:first-child{
+        color: var(--light-secondary-text-color);
+    }
+
+    p:last-child{
+        color: var(--success-color);
+    }
+}
+
+.projects-list--card---info----days{
+
+   
+   
+   
+
+    p{
+        margin: 0;
+        padding: 0;
+        color: var(--light-secondary-text-color);
+        transition: all var(--animation-duration) var(--animation-type);
+    }
+    p:last-child{
+       
+        color: var(--success-color);
+        width: 100%;
+        text-align: center;
+     /*    display: flex;    
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 50px;
+        background-color: var(--button-active-color-light);
+        border-radius: 16px; */
+    }
+}
+
+.dark .projects-list--card {
+    background-color: var(--dark-background-color);
+}
+
+.dark  .projects-list--card---name  {
+    
+    .marker,
+    p{
+        color:var(--dark-text-color);
+    }
+    
+}
+
+.dark  .projects-list--card---name .project-status,
+.dark  .projects-list--card---name .project-code{
+    color: var(--dark-secondary-text-color);
+}
+
+.dark .projects .projects-list--card---info .projects-list--card---info----days,
+.dark .projects .projects-list--card---info .projects-list--card---info----date{
+    
+    p:first-child{
+        color:var(--dark-secondary-text-color);
+    }
+}
+
+
+@media screen and (max-width:1300px){
+
+    .projects-list--card {
+
+       
+        min-width: 330px;       
+        max-height: none;
+        padding-bottom: 10px;
+       
+    }
+    
+    
+    .projects-list--card---name{
+        align-items: center;
+        p{
+            font-size: 2em;
+        }
+    }
+    
+    .projects-list--card---info{
+        font-size: 1.3em;
+    }
+}
