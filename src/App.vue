@@ -11,7 +11,7 @@
 
      
 
-      <ManagerPWA/>
+      
 
       <TopBar v-if="!hideAside" />
 
@@ -24,6 +24,8 @@
 
       <Message />
 
+
+      <ManagerPWA/>
       
 
     </div>
