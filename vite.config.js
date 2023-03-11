@@ -15,29 +15,30 @@ export default defineConfig({
       },
       includeAssets: ["/favicon.png"],    
       manifest: {
-        name: 'My Awesome App',
-        short_name: 'MyApp',
-        description: 'My Awesome App description',
+        name: 'PrePro',
+        short_name: 'PrePro',
+        description: 'PrePro',
         theme_color: '#2f8955',
+        background_color: '#2f8955',
         icons: [
           {
-            "src": "./img/icons/android-chrome-192x192.png",
+            "src": "./assets/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
           },
           {
-            "src": "./img/icons/android-chrome-512x512.png",
+            "src": "./assets/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
           },
           {
-            "src": "./img/icons/android-chrome-maskable-192x192.png",
+            "src": "./assets/android-chrome-maskable-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
           },
           {
-            "src": "./img/icons/android-chrome-maskable-512x512.png",
+            "src": "./assets/android-chrome-maskable-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
